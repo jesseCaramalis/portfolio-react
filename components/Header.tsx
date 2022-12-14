@@ -24,7 +24,7 @@ export default function Header({}: Props) {
             >
                 {/* Socials */}
                 <SocialIcon 
-                    url="https://www.linkedin.com/in/jesse-caramalis/"
+                    url="https://www.linkedin.com/in/jessecaramalis/"
                     fgColor='gray'
                     bgColor='transparent'
                     />

@@ -1,10 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
 import Header from '@/components/Header'
-const inter = Inter({ subsets: ['latin'] })
 import Hero from '@/components/Hero'
+import About from '@/components/About'
+import Skills from '@/components/Skills'
+import Projects from '@/components/Projects'
 
 export default function Home() {
   return (
@@ -17,16 +16,23 @@ export default function Home() {
       <Header />
 
       {/* Hero */}
-      <section id="hero" className='snap-center'>
+      <section id="hero" className='snap-start'>
         <Hero />
       </section>
-      {/* About */}
 
-      {/* Experience */}
+      {/* About */}
+      <section id="about" className='snap-center'>
+        <About />
+      </section>
 
       {/* Skills */}
-
+        <section id="skills" className='snap-start'>
+          <Skills />
+        </section>
       {/* Projects */}
+        <section id="projects" className='snap-start'>
+          <Projects />  
+        </section>
 
       {/* Contact */}
 

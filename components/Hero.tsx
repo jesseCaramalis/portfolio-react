@@ -1,12 +1,15 @@
 import React from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from './BackgroundCircles'
-import Image from 'next/image'
-import headshotImage from '../public/static/headshot.jpeg'
 import Link from 'next/link'
-type Props = {}
+import { PageInfo } from '@/typings'
+import { urlFor } from '@/sanity'
 
-export default function Hero({}: Props) {
+type Props = {
+    pageInfo: PageInfo
+}
+
+export default function Hero({pageInfo}: Props) {
     const [text, count] = useTypewriter({
         words: ["Hi, the name's Jesse Caramalis.", '<Software Engineer />', "Let's build something."],
         loop: true,
@@ -16,8 +19,8 @@ export default function Hero({}: Props) {
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
         <BackgroundCircles />
-        <Image 
-            src={headshotImage} 
+        <img
+            src={urlFor(pageInfo.heroPicture).url()} 
             alt="jesse headshot" 
             className='relative rounded-full h-32 w-32 mx-auto object-cover' 
         />
@@ -32,9 +35,6 @@ export default function Hero({}: Props) {
             <div className='pt-5'>
                 <Link href="#about">
                 <button className='heroButton'>About</button>
-                </Link>
-                <Link href="#experience">
-                <button className='heroButton'>Experience</button>
                 </Link>
                 <Link href="#skills">
                 <button className='heroButton'>Skills</button>

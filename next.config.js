@@ -2,12 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
+    // domains: ['cdn.sanity.io'],
+		// loader: 'custom',
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'imgur.com',
+        hostname: 'cdn.jsdelivr.net',
         port: '',
-        pathname: '/a/wris2Yx',
+        pathname: '/gh/devicons/devicon/icons/*',
       },
     ],
   },

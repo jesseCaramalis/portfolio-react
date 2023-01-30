@@ -1,16 +1,22 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-type Props = {}
+import { PageInfo } from '@/typings'
+import { urlFor } from '@/sanity'
 
-export default function About({}: Props) {
+type Props = {
+    pageInfo: PageInfo
+}
+
+export default function About({pageInfo}: Props) {
   return (
     <motion.div 
     initial={{ opacity: 0 }}
     whileInView={{ opacity: 1 }}
     transition={{ duration: 1.2 }}
-    className='flex flex-col relative h-screen text-center 
-    md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'>
-        <h3 className='absolute top-10 uppercase tracking-[20px] text-gray-500 text-2xl'>
+    className='flex flex-shrink flex-col relative h-screen text-center overflow-auto
+    md:text-left md:flex-row px-5 justify-evenly mx-auto items-center'
+    >
+        <h3 className='absolute top-5 mt-12 uppercase tracking-[20px] text-gray-500 text-2xl'>
             About
         </h3>
 
@@ -27,12 +33,12 @@ export default function About({}: Props) {
                 x: 0 
             }}
             viewport={{ once: true }}
-            src='./static/headshotColor.jpeg'
-            className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover
+            src={urlFor(pageInfo?.aboutPicture).url()}
+            className='h-[25%] mt-20 md:mb-0 flex-shrink rounded-full object-cover
             md:rounded-lg md:w-64 md:h-95 xl:w-[400px] xl:h-[500px]'
         />
 
-        <div className='space-y-10 px-0 md:px-10'>
+        <div className='space-y-5 h-[50%] px-0 md:px-10'>
             <h4 className='text-4xl font-semibold'>
                 I love solving problems
             </h4>

@@ -3,11 +3,9 @@ import { motion } from 'framer-motion'
 import { Project } from '@/typings'
 import { urlFor } from '@/sanity'
 import Image from 'next/image'
-import { SkillType } from '@/typings'
 import { SocialIcon } from 'react-social-icons'
 type Props = {
     projects: Project[];
-    skills: SkillType[];
 }
 
 export default function Projects({projects}: Props) {
@@ -66,7 +64,6 @@ export default function Projects({projects}: Props) {
                             <Image className='h-5 w-5'
                                 width={20}
                                 height={20}
-                                key={technology._key}
                                 src={urlFor(technology.image).url()}
                                 alt="logo for tech used in project"
                                 />

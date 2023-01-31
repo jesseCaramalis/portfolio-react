@@ -26,6 +26,7 @@ export default function Hero({pageInfo}: Props) {
             src={urlFor(pageInfo.heroPicture).url()} 
             alt="jesse headshot" 
             className='relative rounded-full h-32 w-32 mx-auto object-cover' 
+            priority={true}
         />
         <div className='z-20'>
             <h2 className='text-xl uppercase text-gray-500 pb-2 tracking-[15px]'>

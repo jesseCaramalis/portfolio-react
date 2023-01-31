@@ -15,10 +15,10 @@ export default function Contact({}: Props) {
 
             <div className='flex flex-col w-screen space-y-7'>
                 <h4 className='text-xl font-semibold text-center'>
-                    Let's connect!
+                    Let&apos;s connect!
                 </h4>
                 <p className='text-lg px-5 text-center'>
-                    I'm currently accepting new freelance clients and project opportunities.
+                    I&apos;m currently accepting new freelance clients and project opportunities.
                 </p>
 
                 <form className='flex flex-col space-y-2 mx-8' onSubmit={handleSubmit}>
@@ -37,7 +37,7 @@ export default function Contact({}: Props) {
                 
                 <div className='w-3/4 mx-auto px-6 py-2 bg-[#E49B0F] border border-[#E49B0F]/40 rounded-full text-md text-black font-medium'>
                     <span>
-                    Thanks for your message, I'll get back to you as soon as possible!
+                    Thanks for your message, I&apos;ll get back to you as soon as possible!
                     </span>
                 </div>
                 }

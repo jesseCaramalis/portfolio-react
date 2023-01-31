@@ -53,12 +53,12 @@ export default function About({pageInfo}: Props) {
             </h4>
             <p className='text-base lg:text-2xl'>
                 Previously a long time manager in the retail industry, I became frustrated with the tools we had to work with. 
-                Poorly designed software and a lack of automation made mine and many others' lives more difficult.
+                Poorly designed software and a lack of automation made mine and many others&apos; lives more difficult.
                 My passion for solving problems and all things tech led me to pursue a career in software engineering.
             </p>
             <p className='text-base lg:text-2xl'>
                 Now, as a freelance developer, I am able to help both individuals and businesses not only solve problems but bring their ideas to the world.
-                With a background in business, I understand what it takes to deliver exceptional value to any client. Whether it's a website, an application, or custom software; any problem you have, I can help.
+                With a background in business, I understand what it takes to deliver exceptional value to any client. Whether it&apos;s a website, an application, or custom software; any problem you have, I can help.
             </p>
             
         </div>

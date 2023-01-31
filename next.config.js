@@ -11,6 +11,12 @@ const nextConfig = {
         port: '',
         pathname: '/gh/devicons/devicon/icons/*',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        port: '',
+        pathname: '/images/zryka9ox/production/*',
+      },
     ],
   },
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Skill from './Skill'
-import { Skill as SkillType } from '@/typings'
+import { SkillType } from '@/typings'
 import { motion } from 'framer-motion'
 type Props = {
   skills: SkillType[]
@@ -18,15 +18,11 @@ export default function Skills({skills}: Props) {
             Here are some languages and frameworks I work with
         </h3>
 
-        <div className='mt-40 grid grid-cols-4 gap-2'>
-          {skills?.slice(0, skills.length/2).map(skill => (
+        <motion.div className='p-6 h-[50%] grid grid-cols-4 gap-4'>
+          {skills.map(skill => (
             <Skill key={skill._id} skill={skill}/>
           ))}
-
-          {skills?.slice(skills.length/2, skills.length).map(skill => (
-            <Skill key={skill._id} skill={skill} directionLeft/>
-          ))}
-        </div>
+        </motion.div>
     </motion.div>
   )
 }

@@ -5,8 +5,9 @@ interface SanityBody {
     _updatedAt: string;
 }
 
-export interface Skill extends SanityBody {
+export interface SkillType extends SanityBody {
     _type: "skill";
+    name: string;
     image: Image;
     title: string;
 }
@@ -22,6 +23,7 @@ export interface Project extends SanityBody {
     _type: "project";
     title: string;
     summary: string;
+    image: Image;
     linkToBuild: string;
     technologies: Skill[];
 }

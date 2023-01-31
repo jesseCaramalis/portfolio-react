@@ -1,25 +1,30 @@
 import React from 'react'
 import { urlFor } from '@/sanity';
-import { Skill as SkillType } from '@/typings';
+import { SkillType } from '@/typings';
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 
 type Props = {
     skill: SkillType;
-    directionLeft?: boolean;
 }
 
-export default function Skill({ skill, directionLeft }: Props) {
+export default function Skill({ skill}: Props) {
   return (
-    <div className='group relative flex cursor-pointer'>
-        <motion.img
-        initial={{
-            x: directionLeft ? -200 : 200,
-            opacity: 0
-        }}
-        transition={{ duration: 0.3 }}
-        whileInView={{ opacity: 1, x: 0 }}
+    <div 
+    // initial={{
+    //     x: -200,
+    //     opacity: 0
+    // }}
+    // transition={{ duration: 0.3 }}
+    // whileInView={{ opacity: 1, x: 0 }}
+    // key={skill._id}
+    className='group relative flex cursor-pointer'>
+        <Image
         src={urlFor(skill?.image).url()}
+        alt="skill logo"
+        width={14}
+        height={14}
         className='rounded-full border border-gray-500 object-cover w-14 h-14 xl:w-24 xl:h-24 2xl:w-32 2xl:h-32
         filter group-hover:grayscale transition duration-300 ease-in-out'
         />

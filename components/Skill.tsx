@@ -1,7 +1,6 @@
 import React from 'react'
 import { urlFor } from '@/sanity';
 import { SkillType } from '@/typings';
-import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 
@@ -11,15 +10,7 @@ type Props = {
 
 export default function Skill({ skill}: Props) {
   return (
-    <div 
-    // initial={{
-    //     x: -200,
-    //     opacity: 0
-    // }}
-    // transition={{ duration: 0.3 }}
-    // whileInView={{ opacity: 1, x: 0 }}
-    // key={skill._id}
-    className='group relative flex cursor-pointer'>
+    <div className='group relative flex cursor-pointer'>
         <Image
         src={urlFor(skill?.image).url()}
         alt="skill logo"

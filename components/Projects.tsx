@@ -3,8 +3,11 @@ import { motion } from 'framer-motion'
 import { Project } from '@/typings'
 import { urlFor } from '@/sanity'
 import Image from 'next/image'
+import { SkillType } from '@/typings'
+import { SocialIcon } from 'react-social-icons'
 type Props = {
     projects: Project[];
+    skills: SkillType[];
 }
 
 export default function Projects({projects}: Props) {
@@ -36,16 +39,23 @@ export default function Projects({projects}: Props) {
                         transition={{ duration: 1.2}}
                         whileInView={{ opacity: 1, y: 0}}
                         viewport={{once: true}}>
-                    <Image
-                    width={1000}
-                    height={1000}
-                    src={urlFor(project?.image).url()}
-                    alt="project previews" 
-                    className='w-screen px-10 rounded-sm max-w-[1000px] object-cover z-0'
-                    />
+                    <a href={project?.linkToBuild}>
+                        <Image
+                        width={1000}
+                        height={1000}
+                        src={urlFor(project?.image).url()}
+                        alt="project previews" 
+                        className='w-screen px-10 rounded-sm max-w-[1000px] object-cover z-0'
+                        />
+                    </a>
                 </motion.div>
                 <div className='space-y-6 px-0 md:px-10 max-w-6xl'>
                     <h4 className='text-2xl md:text-4xl font-semibold text-center underline decoration-[#E49B0F]/50'>
+                        <SocialIcon 
+                        url={project?.linkToRepo}
+                        fgColor='#E49B0F'
+                        bgColor='transparent'
+                        />
                         <span>
                             Project {i+1} of {projects.length}: {" "}
                         </span>

@@ -25,5 +25,6 @@ export interface Project extends SanityBody {
     summary: string;
     image: Image;
     linkToBuild: string;
+    linkToRepo: string;
     technologies: Skill[];
 }

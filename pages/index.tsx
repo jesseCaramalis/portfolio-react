@@ -8,14 +8,14 @@ import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
 import Link from 'next/link'
 import { ArrowUpCircleIcon } from '@heroicons/react/24/solid'
-import { PageInfo, Skill, Project } from '@/typings'
+import { PageInfo, SkillType, Project } from '@/typings'
 import { fetchPageInfo } from '@/utils/fetchPageInfo'
 import { fetchSkills } from '@/utils/fetchSkills'
 import { fetchProjects } from '@/utils/fetchProjects'
 
 type Props = {
   pageInfo: PageInfo;
-  skills: Skill[];
+  skills: SkillType[];
   projects: Project[];
 }
 
@@ -62,7 +62,7 @@ export default function Home({ pageInfo, projects, skills}: Props) {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
     const pageInfo: PageInfo = await fetchPageInfo();
-    const skills: Skill[] = await fetchSkills();
+    const skills: SkillType[] = await fetchSkills();
     const projects: Project[] = await fetchProjects();
 
     return {

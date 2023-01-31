@@ -28,6 +28,11 @@ export default defineType({
       type: 'url',
     }),
     defineField({
+      name: 'linkToRepo',
+      title: 'LinkToRepo',
+      type: 'url',
+    }),
+    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',

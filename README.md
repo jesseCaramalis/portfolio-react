@@ -5,17 +5,15 @@ This is my new developer portfolio, hand coded using Next.js and Tailwind CSS.
 ## How It's Made:
 **Tech used:** HTML, CSS, TypeScript, React, Next.js, Tailwind, Sanity CDN
 
-The frontend was built using Next.js, with Tailwind for styling. Sanity.io was used as a CDN, so I can update important information from anywhere with Sanity Studio.
-TypeScript was used for type checking values from the CDN, which made the build a lot easier. This was my first time using Next.js, and I found it much more versatile despite being an opinionated framework. The pre-rendering also made the page much snappier, and I'm in the process of fully utilising the Image elements for faster image loading.
+The front-end was built using Next.js, with Tailwind for styling and Framer motion for animations. I incorporated a Sanity CDN for cloud storage of assets and the ability to update key information on the page from Sanity Studio, using Sanity's API and unique query language; GROQ. My favourite part of the page is the animated circles and Typewriter element in the hero section, as well as the little animations that make the site much snappier and smoother.
 
-I also found using Tailwind much more intuitive, although it did open myself up for less DRY code as I am still learning to group similar patterns under global rules.
+The portfolio is fully responsive with Tailwind styling, which I found much more intuitive and easy to work with than regular CSS. However in future projects I will make better use of global styles, as the Tailwind code isn't as DRY as it could be.
 
-Overall I found the page very pleasing to write and style with these utilities.
+## Lessons Learned
 
-## Optimizations
+Deploying this project was a difficult process that gave me valuable lessons in runtime vs compile-time deployment settings, conflicting TypeScript configs and setting up API's with CDN's (to name a few). 
+Overall the use of Next.js and learning about Static Site Generation and Incremental Static Regeneration was an interesting and enjoyable experience.
 
-- finish responsive css
-- implement Next.js Images
-- fix visual bugs with skill component
-- add all current projects to cdn
-- add buttons to indicate horizontal scrol of project component
+## Optimizations and next steps
+- add buttons to horizontal scroll between components
+- deploy as main portfolio website

@@ -1,0 +1,13 @@
+{
+  "..\\node_modules\\@formspree\\react\\dist\\index.mjs -> @stripe/react-stripe-js": {
+    "id": 6664,
+    "files": []
+  },
+  "..\\node_modules\\next-sanity\\dist\\index.js -> @sanity/groq-store": {
+    "id": 7507,
+    "files": [
+      "static/chunks/728cfa9a.2b212aaef0b14091.js",
+      "static/chunks/507.92b1cb1d53cc9728.js"
+    ]
+  }
+}
